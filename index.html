@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="prime">
+        <h1>Prime Number</h1>
+        <input type="text" id="pn" placeholder="Enter the number to find the prime or not">
+        <button type="button" onclick="primeno()"> Prime Number</button>
+      </div>
+    <script>
+        function primeno()
+        {
+        var inp=parseInt(document.getElementById("pn").value);
+        var primecheack=0;
+        for (var start=2; start<inp;start++)
+        {
+            if (inp%start==0)
+            { 
+                alert (inp+ "  is not a prime number");
+                primecheack=1;
+                break;
+
+            }
+            
+
+        }
+        if(primecheack==0)
+            {
+                alert (inp+ "  is a prime number");
+            }
+    }
+
+    function fact(){
+        var i=parseInt(document.getElementById("FtlNu").value);
+        var f1=1;
+        var ans=i;
+        for(var start=1;start<i;start++)
+        {
+            f1=f1+"* "+(start+1);
+            ans=ans*(i-start);
+        }
+        alert(f1+"=  "+ans);
+
+    }
+
+
+    </script>
+
+    <div class="fact">
+        <h1>Factorial Number</h1>
+        <input type="number" id="FtlNu" placeholder="Enter the number to find the factorial">
+        <button type="button" onclick="fact()"> Fact Number</button>
+      
+ 
+
+    </div>
+</body>
+</html>
